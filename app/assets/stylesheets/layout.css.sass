@@ -27,6 +27,17 @@ $color_grey: #B5AFAF
           text-decoration: none
           text-transform: uppercase
           color: $color_pink
+  .navbar
+    .navbar-inner
+      @include gradient-color($color_pink, darken($color_pink, 10%))
+      border-radius: 0px
+      a
+        color: lighten($color_pink, 20%)
+      a
+      .divider-vertical
+        background-color: lighten($color_pink, 20%)
+        border-right: 1px solid #FFFFFF
+
 footer
   @include gradient-color($color_pink, darken($color_pink, 10%))
   height: 40px
