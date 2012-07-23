@@ -1,0 +1,36 @@
+$color_pink: #EF4286
+$color_grey: #B5AFAF
+@mixin gradient-color($color-light, $color-dark)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color-light), to($color-dark))
+  background-image: -webkit-linear-gradient(top, $color-light, $color-dark) 
+  background-image:    -moz-linear-gradient(top, $color-light, $color-dark)
+  background-image:     -ms-linear-gradient(top, $color-light, $color-dark)
+  background-image:      -o-linear-gradient(top, $color-light, $color-dark)
+
+#header
+  h1
+    display: none
+  nav#menu
+    font-size: 12px
+    width: 100%
+    height: 30px
+    ul
+      float: right
+      list-style: none
+      padding-right: 10%
+      li
+        float: left
+        padding: 2px 0px 5px 25px
+        margin-right: 15px
+        border-bottom: solid 1px $color_grey
+        a
+          text-decoration: none
+          text-transform: uppercase
+          color: $color_pink
+footer
+  @include gradient-color($color_pink, darken($color_pink, 10%))
+  height: 40px
+  p
+    padding-top: 10px
+    text-align: center
+    color: #FFFFFF

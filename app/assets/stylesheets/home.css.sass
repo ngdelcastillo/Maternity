@@ -1,0 +1,80 @@
+$color_pink: #EF4286
+$color_grey: #B5AFAF
+$white: #FFFFFF
+
+//Mixins
+@mixin center-banner($color: $color_pink)
+  text-align: center
+  color: $color
+
+@mixin gradient-color($color-light, $color-dark)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color-light), to($color-dark))
+  background-image: -webkit-linear-gradient(top, $color-light, $color-dark) 
+  background-image:    -moz-linear-gradient(top, $color-light, $color-dark)
+  background-image:     -ms-linear-gradient(top, $color-light, $color-dark)
+  background-image:      -o-linear-gradient(top, $color-light, $color-dark)
+
+section#body_content
+  h1#body_content_title
+    display: none
+  section#body
+    .inner
+      @include gradient-color($white, darken($white, 8%))
+      h1
+        @include center-banner($color_pink)
+        font-size: 30px
+        font-style: italic
+        margin-bottom: 0px
+      h2
+        @include center-banner($color_grey)
+        font-size: 20px
+        margin-top: 5px
+      #model
+        padding-right: 120px
+        margin-top: 50px
+      #showcase
+        padding-left: 200px
+        padding-top: 50px
+        img
+          width: 500px
+          height: 250px
+      #quotes
+        padding-left: 200px
+        padding-top: 50px
+        width: 400px
+        #pad
+          //background-image: url(notepad.jpg)
+          width: 450px
+          height: 140px
+          img
+            float: left
+            margin-right: 10px
+            padding-left: 20px
+          p
+            padding-top: 10px
+            padding-left: 20px
+            width: 425px
+          span
+            color: $color_pink
+            float: right
+      ul#slider
+        width: 400px
+        height: 250px
+        list-style: none
+  section#contacts
+    background-image: url(midBG.jpg)
+    margin-top: -8px
+    font-weight: 200
+    .inner
+      padding: 10px 80px 20px 200px
+      img
+        width: 50px
+        padding-right: 10px
+      h2
+        font-weight: 200
+        font-size: 18px
+        color: $color_pink
+      iframe
+        width: 350px
+        height: 250px
+        border: solid 2px $color_pink
