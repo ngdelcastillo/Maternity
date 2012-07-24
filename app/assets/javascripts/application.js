@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.anythingslider
+//= require jquery.anythingslider.video.min
+//= require jquery.anythingslider.min
 //= require twitter/bootstrap
 //= require_tree 
